@@ -10,8 +10,7 @@ Global
 		Debug|x86 = Debug|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5B11FF26-7332-42D2-932F-A0EB18231E45}.Debug|x86.ActiveCfg = Debug|x86
-		{5B11FF26-7332-42D2-932F-A0EB18231E45}.Debug|x86.Build.0 = Debug|x86
+		{5B11FF26-7332-42D2-932F-A0EB18231E45}.Debug|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
