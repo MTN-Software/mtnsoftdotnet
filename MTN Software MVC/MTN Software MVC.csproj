@@ -224,10 +224,7 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Email.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\Home\Project.cshtml" />
-=======
->>>>>>> master
+
     <Content Include="Views\Home\Project.cshtml" />
   </ItemGroup>
   <ItemGroup>
