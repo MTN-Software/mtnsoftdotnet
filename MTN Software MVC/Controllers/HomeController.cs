@@ -33,5 +33,12 @@ namespace MTN_Software_MVC.Controllers
 
             return View();
         }
+
+        public ActionResult Project()
+        {
+            ViewBag.Message = "Your project page.";
+
+            return View();
+        }
     }
 }

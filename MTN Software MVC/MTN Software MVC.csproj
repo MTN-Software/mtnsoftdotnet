@@ -12,6 +12,7 @@
 =======
     <ProjectGuid>{52E76EF5-4919-4C7D-825B-38A30A7A875E}</ProjectGuid>
 >>>>>>> master
+    <ProjectGuid>{5B11FF26-7332-42D2-932F-A0EB18231E45}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -231,6 +232,7 @@
     <Content Include="Views\Home\Project.cshtml" />
 =======
 >>>>>>> master
+    <Content Include="Views\Home\Project.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
