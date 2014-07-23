@@ -7,7 +7,6 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-
     <ProjectGuid>{5B11FF26-7332-42D2-932F-A0EB18231E45}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -224,7 +223,6 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Email.cshtml" />
-
     <Content Include="Views\Home\Project.cshtml" />
   </ItemGroup>
   <ItemGroup>
