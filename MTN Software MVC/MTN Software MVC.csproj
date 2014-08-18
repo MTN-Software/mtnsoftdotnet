@@ -199,6 +199,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="8E9D40855417ADACD7CCBB876061D2BB.txt">
+      <BrowseToURL>~/8E9D40855417ADACD7CCBB876061D2BB.txt</BrowseToURL>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
