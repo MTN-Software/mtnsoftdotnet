@@ -184,7 +184,9 @@
     <Content Include="Images\LogoSimplifiedTransparent.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\mtnsoftware - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\mtnsoftware - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\mtnsoftware - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\mtnsoftware - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\MTNSoftware.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
