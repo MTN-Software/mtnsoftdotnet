@@ -15,6 +15,7 @@ namespace MTN_Software_MVC.Tests.Controllers
         [TestMethod]
         public void Index()
         {
+            
             // Arrange
             HomeController controller = new HomeController();
 

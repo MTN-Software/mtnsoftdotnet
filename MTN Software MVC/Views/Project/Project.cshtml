@@ -1,18 +1,54 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Projects";
+    var vSoft = Html.Id("soft");
+    var vHard = Html.Id("hard");
+    string pageToDisp = "soft";
+
 }
 
+<script>
+    $(document).ready(function () {
+        var soft = $("#software");
+        var hard = $("#hardware");
+
+        soft.click(function (e) {
+            if (!soft.hasClass("active")) {
+                if (hard.hasClass("active")) {
+                    hard.removeClass("active");
+                }
+                soft.addClass("active");
+                @pageToDisp = "soft"
+            }
+        });
+
+        hard.click(function (e) {
+            if (!hard.hasClass("active")) {
+                if (soft.hasClass("active")) {
+                    soft.removeClass("active");
+                }
+                hard.addClass("active");
+                @pageToDisp = "hard"
+            }
+        });
+    });
+</script>
 <div class="alert alert-danger" role="alert">This page is currently under construction.</div>
 <div class="page-header">
     <h1>Projects <small>MTN Software</small></h1>
 </div>
 <div class="row">
-    <div class="list-group">
-        <a href="#" class="list-group-item"></a>
-    </div>
     <div class="col-md-4">
-        
-
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li id="software" class="active"><a href="#">Software</a></li>
+            <li id="hardware"><a href="#">Hardware</a></li>
+        </ul>
+        @if (pageToDisp == "soft")
+        {
+            RenderPage("_SoftwarePartial.cshtml");
+        }
+        else
+        { 
+            RenderPage("_HardwarePartial.cshtml");
+        }
     </div>
 </div>

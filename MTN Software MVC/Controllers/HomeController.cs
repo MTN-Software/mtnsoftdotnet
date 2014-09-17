@@ -3,12 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
+using Microsoft.AspNet.Identity;
+using MTN_Software_MVC.Models;
 
 namespace MTN_Software_MVC.Controllers
 {
     
     public class HomeController : Controller
     {
+        private ApplicationUserManager _userManager;
+        public ApplicationUserManager UserManager
+        {
+            get
+            {
+                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            }
+            private set
+            {
+                _userManager = value;
+            }
+        }
         public ActionResult Index()
         {
             return View();
@@ -40,6 +57,35 @@ namespace MTN_Software_MVC.Controllers
             ViewBag.Message = "Your project page.";
 
             return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Support(LoginViewModel model, string returnUrl)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Request.IsAuthenticated)
+                {
+                    IdentityMessage ident = new IdentityMessage();
+                    ident.Subject = model.Email;
+                    ident.Body = "test send";
+                    ident.Destination = "thomas@mtnsoftware.net";
+                    var username = Request.LogonUserIdentity.GetUserName();
+                    var user = UserManager.EmailService;
+                    await user.SendAsync(ident);
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    return View(model);
+                }
+            }
+            else
+            {
+                return View(model);
+            }
         }
     }
 }

@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+
     <title>@ViewBag.Title - MTN Software</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -33,12 +34,6 @@
                     </li>
                     <li>@Html.ActionLink("Projects", "Project", "Project")</li>
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-toolbar" >Submit</button>
-                </form>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
