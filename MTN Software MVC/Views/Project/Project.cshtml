@@ -8,27 +8,16 @@
 
 <script>
     $(document).ready(function () {
-        var soft = $("#software");
-        var hard = $("#hardware");
+        var soft = $("#software a");
+        var hard = $("#hardware a");
 
         soft.click(function (e) {
-            if (!soft.hasClass("active")) {
-                if (hard.hasClass("active")) {
-                    hard.removeClass("active");
-                }
-                soft.addClass("active");
-                @pageToDisp = "soft"
-            }
+            //e.PreventDefault();
+            $(this).tab('show');
         });
 
         hard.click(function (e) {
-            if (!hard.hasClass("active")) {
-                if (soft.hasClass("active")) {
-                    soft.removeClass("active");
-                }
-                hard.addClass("active");
-                @pageToDisp = "hard"
-            }
+            $(this).tab('show');
         });
     });
 </script>
@@ -39,16 +28,13 @@
 <div class="row">
     <div class="col-md-4">
         <ul class="nav nav-tabs nav-justified" role="tablist">
-            <li id="software" class="active"><a href="#">Software</a></li>
-            <li id="hardware"><a href="#">Hardware</a></li>
+            <li id="software" class="active"><a href="#soft" role="tab" data-toggle="tab">Software</a></li>
+            <li id="hardware"><a href="#hard" role="tab" data-toggle="tab">Hardware</a></li>
         </ul>
-        @if (pageToDisp == "soft")
-        {
-            RenderPage("_SoftwarePartial.cshtml");
-        }
-        else
-        { 
-            RenderPage("_HardwarePartial.cshtml");
-        }
+
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="soft">@RenderPage("_SoftwarePartial.cshtml")</div>
+            <div class="tab-pane fade" id="hard">@RenderPage("_HardwarePartial.cshtml")</div>
+        </div>
     </div>
 </div>
