@@ -1,5 +1,5 @@
 ﻿@using MTN_Software_MVC.Models
-@model LoginViewModel
+@model MailModels
 @{
     ViewBag.Title = "Support";
 }
@@ -18,13 +18,21 @@
             @using (Html.BeginForm("Support", "Home", FormMethod.Post))
             {
                 @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger"})
                 <div class="form-group">
                     @Html.LabelFor(m => m.Email,new { @class = "col-md-4 control-label"})
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Email, new {  @class = "form-control" })
                     </div>
                 </div>
-                
+                <div class="form-group">
+                    @Html.TextAreaFor(m => m.Message, new { @class = "span6", @style = "border-radius: 4px; border: 1px solid rgb(204, 204, 204); transition:border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; border-image: none; width: 100%; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075); max-width: 100%;"})
+                </div>
+                <div class="form-group">
+                    <div class="btn btn-group btn-group-justified">
+                        <input type="submit" class="btn btn-default" value="Send"/>
+                    </div>
+                </div>
                 <!--<div class="input-group">
                     <span class="input-group-addon">Subject</span>
                     <input type="text" class="form-control" placeholder="Enter subject of support" />

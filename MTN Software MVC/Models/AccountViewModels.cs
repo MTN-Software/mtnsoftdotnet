@@ -98,4 +98,13 @@ namespace MTN_Software_MVC.Models
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
+
+    public class MailModels
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        //public string Telephone { get; set; }     not required information
+        public string Message { get; set; }
+    }
+
 }
