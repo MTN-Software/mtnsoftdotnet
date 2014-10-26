@@ -1,0 +1,412 @@
+﻿@{
+    ViewBag.Title = "Stress";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+        var teenStress = $("#teenstress a");
+        var myStress = $("#mystress a");
+        var shortTerm = $("#shortterm a");
+        var longTerm = $("#longterm a");
+
+        teenStress.click(function (e) {
+            //e.PreventDefault();
+            $(this).tab('show');
+        });
+
+        myStress.click(function (e) {
+            $(this).tab('show');
+        });
+
+        shortTerm.click(function (e) {
+            $(this).tab('show');
+        });
+
+        longTerm.click(function (e) {
+            $(this).tab('show');
+        });
+
+        $('#popover').click(function (e) {
+            $('#popover').popover();
+        });
+    });
+</script>
+
+<div class="page-header">
+    <h1>Stress Management. <small>By Thomas Maloney</small></h1>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h2>What is stress?</h2>
+        <p>To me, stress is the body's response to any physical or emotional change.</p>
+        <p>
+            However, According to the American Institute of Stress,
+            the term stress was coined by Hans Selye as "the non-specific
+            response of the body to any demand for change".  Stress has
+            become something of a buzzword in the science community, completely
+            ignoring Selyes original definition.  The term "stressor" was coined
+            to distinguish stimulus from response.  In 1951, one physician
+            concluded "Stress in addition to being itself, was also the cause
+            of itself, and the result of itself".  There are two
+            different kinds of stress: Eustress and distress.
+        </p>
+        <p>
+            Eustress is when the body gets put under stress because of something
+            good that has happened.  An example of this would be winning a prize
+            or winning an election.
+        </p>
+        <p>
+            Distress is when the body gets put under stress because of something
+            bad that has happened.  An example of this would be physical injury
+            or emotional injury.
+        </p>
+    </div>
+    <div class="col-md-6">
+        <!-- Nav tabs -->
+        <h2>Stressors for...</h2>
+        <ul class="nav nav-tabs" role="tablist">
+            <li id="teenstress" class="active"><a href="#teen" role="tab" data-toggle="tab">Teenagers</a></li>
+            <li id="mystress"><a href="#me" role="tab" data-toggle="tab">Me</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="teen">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Stressor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Bullying</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Body image</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Homework</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Relationships</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>College</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Careers</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Extracurricular Activities</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Finding out who they are</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Relocation</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>School</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="me">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Stressor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Relations</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>School work</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Robotics team</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Programming</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Time Management</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <h2>Continuum</h2>
+        <span class="visible-lg"><img src="~/Images/continuum.svg" alt="Continuum" /></span>
+        <span class="hidden-lg"><a href="~/Images/continuum.svg" class="btn btn-primary">View Continuum</a></span>
+        <p>
+            I am placed under JQuery because I feel on a stress scale from 1 to 10 (Assembly to Lua), I would
+            rank at a 7/10 (JQuery).  Programming is a major hobby of mine and as a result, I used programming
+            languages to represent a continuum scale.  They are ordered from lowest level language to highest
+            level language.  A lower level programming language will abstract less of what the computer
+            is doing than a higher level programming language.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <!-- Nav tabs -->
+        <h2>Effects of being overstressed.</h2>
+        <ul class="nav nav-tabs" role="tablist">
+            <li id="longterm" class="active"><a href="#long" role="tab" data-toggle="tab">Long Term</a></li>
+            <li id="shortterm"><a href="#short" role="tab" data-toggle="tab">Short Term</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="long">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Effects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Increases susceptibility of illness</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Increase in blood pressure</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Increased risk of heart disease</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Muscle tension</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Increased risk of ulcers</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Worsen the symptoms of asthma</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Increased risk of kidney disease</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Unable to focus on a task</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Increase in occurrence of temper loss</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Feeling anxious</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="short">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Effects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Increased Heart Rate</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sweaty Skin</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Release of adrenaline</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Blood flow is diverted from extremities to muscles and internal organs</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Increased rate of breathing</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Nausea</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Headache</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Hypersensitivity</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Shakiness</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Back Pains</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <!--<div class="alert alert-info">Insert what is done personally to reduce stress.</div>-->
+        <h2>Stress Reduction</h2>
+        <p>
+            When I am distressed because of relation issues or school, I will listen to music or play
+            guitar. Some of my favorite bands to listen to are Dream Theater, Haken, Tool,
+            Thank You Scientist, Coheed and Cambria, Insomnium, Liquid Tension Expirement,
+            and Rush.  If I am stressed distressed because of work (School work, programming, etc.),
+            I will relax by playing video games or browsing the internet.  Sometimes just sleeping
+            will work really well to reduce any stress that I am under.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">What is empathy?</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Empathy is the capacity to share or recognize emotions experienced by another sentient or fictional
+                    being. I saw this in my life when one of my friends went through a rather large change
+                    in his life, his friends and I all tried to be there for him. Although
+                    we could not directly relate to his situation, we recognized that and attempted
+                    to understand to the best of our abilities.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Myer Briggs analysis</h3>
+            </div>
+            <div class="panel-body">
+                <button id="popover" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="top" title="Results"
+                        data-content="Quiet, kind, and conscientious.  Can be depended on to follow through.  Usually puts the
+                    needs of others above their own needs.  Stable and practical, they value security and traditions.
+                    Well-developed sense of space and function. Rich inner world of observations about people.
+                    Extremely perceptive of other’s feelings. Interested in serving others.">
+                    Personality Inventory Result
+                </button>
+
+                <p>
+                    The result of the Myer Briggs Personality Inventory relates to my management of stress by describing
+                    how I deal with the needs of myself and others.  I personally do not believe it is accurate as it
+                    could be, but for the most part, it is not wrong.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">What is Resiliency?</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Resiliency is an individual’s ability to properly adapt to stress and adversity.
+                    Resiliency is important for school because changes happen often in school we
+                    need to be able to quickly adapt to the new environment.  It is also important
+                    when dealing with friends because losing or gaining friends can put stress on an
+                    individual and if we weren’t able to adapt, our relations would most likely crumble.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">What do you like to do?</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    I like to develop for Microsoft’s mobile platform using the .NET framework.
+                    I also like to program and use Arch Linux.  I enjoy playing guitar and
+                    have begun to write my own music.  I also enjoy designing websites and working
+                    with Microsoft’s cloud platform (Azure).  I like spending time with my friends
+                    and I enjoy listening to music.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <blockquote>
+            <p>They don’t think it be like it is, but it do.</p>
+            <footer>Oscar Gamble</footer>
+        </blockquote>
+    </div>
+    <div class="col-md-4">
+        <blockquote>
+            <p>Has anyone really been far even as decided to use even go want to do look more like?</p>
+            <footer>Anon</footer>
+        </blockquote>
+    </div>
+    <div class="col-md-4">
+        <blockquote>
+            <p>First step in solving any problem is recognizing there is one.</p>
+            <footer>Will in <cite title="Source Title">The Newsroom</cite></footer>
+        </blockquote>
+    </div>
+</div>

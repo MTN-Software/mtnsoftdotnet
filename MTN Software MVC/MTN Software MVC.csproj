@@ -179,6 +179,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\continuum.svg" />
     <Content Include="Images\LogoIcon.png" />
     <Content Include="Images\LogoIconInverse.png" />
     <Content Include="Images\LogoSimplifiedTransparent.png" />
@@ -238,6 +239,8 @@
     <Content Include="Views\Project\Project.cshtml" />
     <Content Include="Views\Project\_SoftwarePartial.cshtml" />
     <Content Include="Views\Project\_HardwarePartial.cshtml" />
+    <Content Include="Views\Home\StressTemp.cshtml" />
+    <Content Include="Views\Home\Stress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

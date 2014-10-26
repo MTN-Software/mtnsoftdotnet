@@ -33,6 +33,7 @@ namespace MTN_Software_MVC.Controllers
             return View();
         }
 
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -129,6 +130,11 @@ namespace MTN_Software_MVC.Controllers
                 
             }
             return View("email",e);
+        }
+
+        public ActionResult Stress()
+        {
+            return View();
         }
     }
 }

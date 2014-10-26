@@ -28,6 +28,8 @@ namespace MTN_Software_MVC.Tests.Controllers
             Assert.IsNotNull(result);
         }
 
+
+
         [TestMethod]
         public void About()
         {
@@ -86,6 +88,19 @@ namespace MTN_Software_MVC.Tests.Controllers
 
             //ActionResult res = result.RunSynchronously();
             return result.Result;
+        }
+
+        [TestMethod]
+        public void Stress()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.Stress() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
         }
     }
 }
