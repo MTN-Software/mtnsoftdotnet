@@ -5,6 +5,7 @@
 
 <script>
     $(document).ready(function () {
+        $('#introModal').modal('show');
         var teenStress = $("#teenstress a");
         var myStress = $("#mystress a");
         var shortTerm = $("#shortterm a");
@@ -33,6 +34,33 @@
     });
 </script>
 
+<!--Modal-->
+<div id="introModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Welcome!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Welcome to Thomas Maloney's Stress Project Page!</p>
+                <p>
+                    This page was made for Mrs. Conlon's 3rd period health class.
+                    The continuum picture will show up about half of the time, so
+                    just incase, I sent an email with the svg file.  If you want 
+                    to view the source for this webpage, just right-click and then 
+                    select "view source", or just visit the 
+                    <a class="btn btn-success" href="https://github.com/MTN-Software/mtnsoftdotnet" target="_blank">github repo</a>.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Dismiss</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--/Modal-->
 <div class="page-header">
     <h1>Stress Management. <small>By Thomas Maloney</small></h1>
 </div>
@@ -175,7 +203,9 @@
             rank at a 7/10 (JQuery).  Programming is a major hobby of mine and as a result, I used programming
             languages to represent a continuum scale.  They are ordered from lowest level language to highest
             level language.  A lower level programming language will abstract less of what the computer
-            is doing than a higher level programming language.
+            is doing than a higher level programming language.  I relate this to my stress because the
+            more abstracted and less in control of a situation I am in, the more distressed about the
+            situation I feel.
         </p>
     </div>
 </div>
@@ -349,8 +379,9 @@
 
                 <p>
                     The result of the Myer Briggs Personality Inventory relates to my management of stress by describing
-                    how I deal with the needs of myself and others.  I personally do not believe it is accurate as it
-                    could be, but for the most part, it is not wrong.
+                    how I deal with the needs of myself and others.  I cope with my stress by writing and by listening to music.
+                    This keeps me stable, and is a practical means of doing so.  I personally do not believe it is accurate as
+                    it could be, but for the most part, it is not wrong.
                 </p>
             </div>
         </div>
