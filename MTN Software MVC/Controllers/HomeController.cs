@@ -63,9 +63,8 @@ namespace MTN_Software_MVC.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Support(MailModels e, string returnUrl)
+        public ActionResult SendEmail(MailModels e, string returnUrl)
         {
             /*if (ModelState.IsValid)
             {
@@ -106,22 +105,21 @@ namespace MTN_Software_MVC.Controllers
 
                     smtp.Host = "smtp.mail.privateemail.com"; //"imap.ox.registrar-servers.com";
                     smtp.Port = 587;
-
-                    System.Net.NetworkCredential credentials = new System.Net.NetworkCredential("thomas@mtnsoftware", "beLndt123$");
-
-                    smtp.Credentials = credentials;
+                    smtp.Credentials = new System.Net.NetworkCredential("email address", "password");
                     smtp.EnableSsl = true;
-
+                    smtp.UseDefaultCredentials = true;
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
 
                     mail.From = from;
                     mail.To.Add("thomas@mtnsoftware.net");
-                    mail.Subject = "Test enquiry from " + e.Name;
+                    mail.Subject = "Test enquiry from " + e.Email;
                     mail.Body = message.ToString();
+                    mail.Priority = MailPriority.Normal;
 
                     smtp.Send(mail);
                     smtp.Dispose();
                 }
-                catch (Exception)
+                catch (Exception ex )
                 {
 
                     ModelState.AddModelError("", "Sorry! This service is currently unavailable...");
@@ -129,7 +127,7 @@ namespace MTN_Software_MVC.Controllers
                 }
                 
             }
-            return View("email",e);
+            return View("Email");
         }
 
         public ActionResult Stress()
