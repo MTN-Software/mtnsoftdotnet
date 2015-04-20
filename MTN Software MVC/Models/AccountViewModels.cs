@@ -104,7 +104,10 @@ namespace MTN_Software_MVC.Models
         public string Name { get; set; }
         public string Email { get; set; }
         //public string Telephone { get; set; }     not required information
+        public string SmtpHost { get; set; }
+        public string emailPass { get; set; }       // I know this is terrible, I'll fix it when I find out how
         public string Message { get; set; }
+        public bool IsErr { get; set; }
     }
 
 }

@@ -43,7 +43,7 @@ namespace MTN_Software_MVC.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact us.";
 
             return View();
         }
@@ -103,9 +103,9 @@ namespace MTN_Software_MVC.Controllers
 
                     SmtpClient smtp = new SmtpClient();
 
-                    smtp.Host = "smtp.mail.privateemail.com"; //"imap.ox.registrar-servers.com";
+                    smtp.Host = e.SmtpHost; //"imap.ox.registrar-servers.com"; //smtp.mail.privateemail.com
                     smtp.Port = 587;
-                    smtp.Credentials = new System.Net.NetworkCredential("email address", "password");
+                    smtp.Credentials = new System.Net.NetworkCredential(e.Email, e.emailPass);
                     smtp.EnableSsl = true;
                     smtp.UseDefaultCredentials = true;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
@@ -118,12 +118,13 @@ namespace MTN_Software_MVC.Controllers
 
                     smtp.Send(mail);
                     smtp.Dispose();
+                    e.IsErr = false;
                 }
                 catch (Exception ex )
                 {
 
-                    ModelState.AddModelError("", "Sorry! This service is currently unavailable...");
-
+                    ModelState.AddModelError("Err", "Sorry! This service is currently unavailable...");
+                    e.IsErr = true;
                 }
                 
             }

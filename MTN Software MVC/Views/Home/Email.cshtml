@@ -22,6 +22,10 @@
                 @Html.ValidationSummary("", new { @class = "text-danger" })
                 <label>Your email</label>
                 @Html.TextBoxFor(m => m.Email, new { @Value = User.Identity.GetUserName() })
+                <label>Your email password (not stored)</label>
+                @Html.TextBoxFor(m => m.emailPass)
+                <label>Your smtp host</label>
+                @Html.TextBoxFor(m => m.SmtpHost)
                 <label>Message</label>
                 @Html.TextBoxFor(m => m.Message)
                 <input type="submit" name="name" value="SendMail" />

@@ -74,20 +74,26 @@ namespace MTN_Software_MVC.Tests.Controllers
         //[AllowAnonymous]
         //[ValidateAntiForgeryToken]
         [TestMethod]
-        public async Task<ActionResult> Support(MailModels e, string returnUrl)
+        public void SendEmail()
         {
             // Arrange
+            MailModels e = new MailModels();
+            string returnUrl = string.Empty;
             HomeController controller = new HomeController();
+            e.Email = "ThomasTNF@live.com";
+            e.emailPass = "beLndt123";
+            e.SmtpHost = "smtp.live.com";
+            e.Name = "Thomas";
+            e.Message = "Test message";
 
             // Act
-            Task<ActionResult> result = controller.Support(e, returnUrl) as Task<ActionResult>;
-            ActionResult res = await result;
+            ActionResult result = controller.SendEmail(e, returnUrl) as ActionResult;
+            
             // Assert
-            Assert.IsNotNull(res);
-            //Assert.IsNull(res);
+            Assert.AreEqual(false, e.IsErr);
 
             //ActionResult res = result.RunSynchronously();
-            return result.Result;
+            
         }
 
         [TestMethod]
