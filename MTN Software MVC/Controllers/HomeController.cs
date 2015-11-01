@@ -13,7 +13,7 @@ using System.Net.Mail;
 
 namespace MTN_Software_MVC.Controllers
 {
-    
+    //[InitializeSimpleMembership]
     public class HomeController : Controller
     {
         private ApplicationUserManager _userManager;
@@ -89,6 +89,7 @@ namespace MTN_Software_MVC.Controllers
             {
                 return View(model);
             }*/
+            //TODO: FIX THIS!
             if (ModelState.IsValid)
             {
                 try
@@ -121,8 +122,8 @@ namespace MTN_Software_MVC.Controllers
                 }
                 catch (Exception ex )
                 {
-
-                    ModelState.AddModelError("", "Sorry! This service is currently unavailable...");
+                    
+                    ModelState.AddModelError(ex.HResult.ToString(), "Sorry! This service is currently unavailable...");
 
                 }
                 

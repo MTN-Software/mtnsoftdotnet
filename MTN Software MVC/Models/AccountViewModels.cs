@@ -99,11 +99,11 @@ namespace MTN_Software_MVC.Models
         public string Email { get; set; }
     }
 
-    public class MailModels
+
+    public class MailModels     // Why mail models?
     {
         public string Name { get; set; }
         public string Email { get; set; }
-        //public string Telephone { get; set; }     not required information
         public string Message { get; set; }
     }
 
